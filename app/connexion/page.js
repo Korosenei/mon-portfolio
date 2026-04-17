@@ -44,20 +44,6 @@ export default function ConnexionPage() {
 
       <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: '420px' }}>
 
-        {/* BACK */}
-        <Link href="/" style={{
-          display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-          fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--muted)',
-          textDecoration: 'none', marginBottom: '2rem', transition: 'color 0.3s',
-        }}
-          onMouseEnter={e => e.currentTarget.style.color = 'var(--neon)'}
-          onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}>
-          <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-          </svg>
-          Retour au portfolio
-        </Link>
-
         {/* CARD */}
         <div style={{
           background: 'var(--card)', border: '1px solid var(--border)',
@@ -68,19 +54,13 @@ export default function ConnexionPage() {
 
           {/* ICON */}
           <div style={{
-            width: '52px', height: '52px', borderRadius: '12px',
+            height: '52px', borderRadius: '12px',
+            fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem',
             background: 'linear-gradient(135deg, rgba(123,47,255,0.2), rgba(0,245,212,0.1))',
             border: '1px solid rgba(123,47,255,0.3)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             marginBottom: '1.5rem', fontSize: '1.4rem',
-          }}>🔐</div>
-
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.4rem' }}>
-            Dashboard Admin
-          </h1>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '2rem' }}>
-            // Connexion sécurisée
-          </p>
+          }}>🔐 Mon espace sécurisé</div>
 
           {error && (
             <div style={{
@@ -147,11 +127,22 @@ export default function ConnexionPage() {
                 </>
               )}
             </button>
-          </form>
 
-          <p style={{ textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--muted)', marginTop: '1.5rem' }}>
-            Accès réservé à l'administrateur du portfolio
-          </p>
+            {/* BACK */}
+            <Link href="/" style={{
+            display: 'inline-flex', gap: '0.5rem',
+            justifyContent: 'center',
+            fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--muted)',
+            textDecoration: 'none', marginBottom: '0.5rem', transition: 'color 0.3s',
+            }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--neon)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}>
+                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Aller au portfolio
+            </Link>
+          </form>
         </div>
 
         {/* DEMO INFO */}

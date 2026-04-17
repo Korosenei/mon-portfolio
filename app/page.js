@@ -1,12 +1,12 @@
 'use client'
-import Header from '@/app/layout/Header'
-import Footer from '@/app/layout/Footer'
-import HeroSection from '@/app/sections/HeroSection'
-import AboutSection from '@/app/sections/AboutSection'
-import ExperienceSection from '@/app/sections/ExperienceSection'
-import SkillsSection from '@/app/sections/SkillsSection'
-import ProjectsSection from '@/app/sections/ProjectsSection'
-import ContactSection from '@/app/sections/ContactSection'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import HeroSection from '@/components/sections/HeroSection'
+import AboutSection from '@/components/sections/AboutSection'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import SkillsSection from '@/components/sections/SkillsSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
+import ContactSection from '@/components/sections/ContactSection'
 import {
   profileData,
   experiencesData,

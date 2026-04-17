@@ -141,7 +141,7 @@ export default function Footer({ profile }) {
               Built with Next.js & Supabase
             </span>
 
-            <Link href="/dashboard" style={{
+            <Link href="/connexion" style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
               padding: '0.45rem 1rem',
               border: '1px solid rgba(123,47,255,0.3)',
