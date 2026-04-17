@@ -1,19 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Désactive la vérification TypeScript pendant le build
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Images : autorise les domaines externes
+  // ✅ Nouvelle syntaxe (remplace images.domains)
   images: {
-    domains: ['jcutamijeeciwdwptxb.supabase.co'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'jcutamijeeciwdwptxb.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/**',
+      },
+    ],
     unoptimized: true,
   },
-  // Pour le déploiement sur Vercel
   output: 'standalone',
-  // Désactive le linting (via une variable d'env ou configuration séparée)
-  // Pour ESLint, utilise un fichier .eslintrc.json séparé
+  reactStrictMode: false,
 };
 
 export default nextConfig;
